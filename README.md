@@ -5,13 +5,13 @@
 #### 구현화면
 ---
 #### index
-![image](https://github.com/dlclfh0404/shoppingmall-membermanagerment/assets/106458316/c8ebb5c1-ee13-4d70-bfd3-392548f92e24)
+![image](https://github.com/dlclfh0404/shoppingmall-membermanagerment/assets/106458316/223c2638-4598-4f21-983a-295f7c19e2f4)
 ---
 #### join
 ![image](https://github.com/dlclfh0404/shoppingmall-membermanagerment/assets/106458316/254a0ef3-d2ad-490e-b1a3-4e9d907f0863)
 ---
 #### member_list
-![image](https://github.com/dlclfh0404/shoppingmall-membermanagerment/assets/106458316/76c43ebf-ea76-4df1-9e3f-cb45dd5c6d03)
+![image](https://github.com/dlclfh0404/shoppingmall-membermanagerment/assets/106458316/15beda99-d537-4ae1-a4f5-5f0c285f8e9e)
 ---
 #### z_input
 ![image](https://github.com/dlclfh0404/shoppingmall-membermanagerment/assets/106458316/4961d88f-4889-4298-8ae2-f7f9cc763046)
