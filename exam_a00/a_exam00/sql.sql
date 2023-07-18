@@ -1,1 +1,0 @@
-Select * from emp_master;
