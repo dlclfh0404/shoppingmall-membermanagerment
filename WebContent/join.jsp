@@ -1,60 +1,58 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-<%@ include file="layout/db_connect.jsp"%>
+    
+<%@ include file = "layout/db_connect.jsp" %>
 <%
-	String sql="select max(custno)+1 from member_tbl_02";
+	String sql="select max(custno) from member_tbl_02";
+	
 	PreparedStatement pstmt = conn.prepareStatement(sql);
 	ResultSet rs = pstmt.executeQuery();
 	rs.next();
-	int num = rs.getInt(1);
-%>	
+	int num = rs.getInt(1)+1;
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>쇼핑물 회원관리</title>
-	<link rel="stylesheet" href="./css/style.css?ver1.1.15">
+	<title>쇼핑몰 회원관리</title>
+	<link rel="stylesheet" href="./css/style.css?ver1.1">
 	<script type="text/javascript">
 		function checkValue() {
-	
-			var cv = document.data;
-			
-			if(!cv.custname.value) {
+			if(document.data.custname.value == "") {
 				alert("회원성명을 입력하세요.");
-				cv.custname.focus();
+				document.data.custname.focus();
 				return false;
 			}
-			if(!cv.phone.value) {
+			if(!document.data.phone.value) {
 				alert("회원전화를 입력하세요.");
-				cv.phone.focus();
+				document.data.phone.focus();
 				return false;
 			}
-			if(!cv.address.value) {
+			if(!document.data.address.value) {
 				alert("회원주소를 입력하세요.");
-				cv.address.focus();
+				document.data.address.focus();
 				return false;
 			}
-			if(!cv.joindate.value) {
+			if(!document.data.joindate.value) {
 				alert("가입일자를 입력하세요.");
-				cv.joindate.focus();
+				document.data.joindate.focus();
 				return false;
 			}
-			if(!cv.grade.value) {
+			if(!document.data.grade.value) {
 				alert("고객등급을 입력하세요.");
-				cv.grade.focus();
+				document.data.grade.focus();
 				return false;
 			}
-			if(!cv.city.value) {
+			if(!document.data.city.value) {
 				alert("도시코드를 입력하세요.");
-				cv.city.focus();
+				document.data.city.focus();
 				return false;
 			}
-		
 		}
-		
 	</script>
 </head>
+
 <body>
 	<header>
 		<jsp:include page="layout/header.jsp"></jsp:include>
@@ -65,7 +63,7 @@
 	</nav>
 	
 	<main id="section">
-		<h2 class="title">홈쇼핑 회원 등록</h2>
+		<h3 class="title">홈쇼핑 회원 등록</h3>
 		<form name="data" method="post" action="join_p.jsp" onsubmit="return checkValue()">
 			<table class="table_line">
 				<tr>
@@ -74,11 +72,11 @@
 				</tr>
 				<tr>
 					<th>회원성명</th>
-					<td><input type="text" name="custname" placeholder="성명을 입력해주세요" autofocus></td>
+					<td><input type="text" name="custname" autofocus></td>
 				</tr>
 				<tr>
 					<th>회원전화</th>
-					<td><input type="text" name="phone" placeholder="000-0000-0000"></td>
+					<td><input type="text" name="phone"></td>
 				</tr>
 				<tr>
 					<th>회원주소</th>
@@ -110,5 +108,6 @@
 	<footer>
 		<jsp:include page="layout/footer.jsp"></jsp:include>
 	</footer>
+	
 </body>
 </html>

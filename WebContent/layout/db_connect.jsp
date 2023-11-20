@@ -5,14 +5,14 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>쇼핑물 회원관리</title>
+	<title>쇼핑물 회원 관리</title>
 </head>
 <body>
 <%
 	Connection conn = null;
 	String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	String id  = "system";
-	String pw  = "1234";
+	String id = "system";
+	String pw = "1234";
 	
 	try {
 		Class.forName("oracle.jdbc.OracleDriver");
